@@ -1,0 +1,724 @@
+
+<!DOCTYPE html><html lang="en"><head>
+  <base href="">
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bundle_sa.css">
+			<script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    /*=============HELPER================*/
+    var Helper = (function() {
+
+      var data = [];
+
+      var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+      function setDays(d) {
+        if ((d.constructor !== Array) || d.length !== 7)
+          return false;
+
+        days = d;
+      }
+
+      function setMonths(m) {
+        if ((m.constructor !== Array) || m.length !== 12)
+          return false;
+
+        months = m;
+      }
+
+      function getDate() {
+        var now = new Date();
+        var month = typeof(months[now.getMonth()]) == 'undefined' ? now.getMonth() : months[now.getMonth()];
+        return (now.getDate()) + " " + month + " " + now.getFullYear();
+      }
+
+      function getMonth() {
+        var now = new Date();
+        var month = typeof(months[now.getMonth()]) == 'undefined' ? now.getMonth() : months[now.getMonth()];
+        return month;
+      }
+
+      function getDay() {
+        var now = new Date();
+        var day = typeof(days[now.getDay()]) == 'undefined' ? now.getDay() : days[now.getDay()];
+        return day;
+      }
+
+      function getDayOfMonth() {
+        var now = new Date();
+        var day = ('0' + now.getDate()).slice(-2);
+        return day;
+      }
+
+      function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
+
+      function findAncestor(element, name) {
+        while ((element = element.parentElement) && !element.classList.contains(name));
+        return element;
+      }
+
+      function bindOnQuery(query, callback, action = 'click') {
+        var elements = document.querySelectorAll(query);
+        for (var i = 0; i < elements.length; i++) {
+          elements[i].addEventListener(action, callback, false);
+        }
+      }
+
+      function bindOnId(name, callback, action = 'click') {
+        var element = document.getElementById(name);
+        element.addEventListener(action, callback, false);
+      }
+
+      function replaceMarkers(text, markers) {
+        for (key in markers) {
+          var search = '%'+ key +'%';
+          text = text.replace(new RegExp(search, 'g'), markers[key]);
+        }
+
+        return text;
+      }
+
+      return {
+        setDays: setDays,
+        setMonths: setMonths,
+        getDate: getDate,
+        getDay: getDay,
+        getMonth: getMonth,
+        getDayOfMonth: getDayOfMonth,
+        getUrlParameter: getUrlParameter,
+        findAncestor: findAncestor,
+        bindOnQuery: bindOnQuery,
+        bindOnId: bindOnId,
+        replaceMarkers: replaceMarkers
+      };
+
+    })();
+    </script>
+    <title>Amazon reward program</title>
+</head>
+<body class="modal-open"><div class="tingle-modal" style="display: none;"><div class="tingle-modal-box"><div class="tingle-modal-box__content"></div><div class="tingle-modal-box__footer"><button></button></div></div></div><div class="tingle-modal" style="display: none;"><div class="tingle-modal-box"><div class="tingle-modal-box__content"></div><div class="tingle-modal-box__footer"><button></button></div></div></div>
+
+			<header>
+		  <div class="logo-wrap">
+		    <div class="container">
+		      <div class="row">
+		        <div class="col-xs-12 col-md-8 col-md-offset-2 ">
+		          <table style="width: 100%;">
+		            <tbody><tr>
+		              <td class="logo">
+		                <img src="img/s-l.png">
+		              </td>
+		              <td class="lang">
+		                
+		              </td>
+		            </tr>
+		          </tbody></table>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="slogan-wrap">
+		    <div class="container">
+		      <div class="row">
+		        <div class="col-xs-12 col-md-8 col-md-offset-2 slogan text-xs-left">
+		         Amazon reward program
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</header>
+		<div class="container body-container">
+		<div class="row">
+			<div class="lead-container col-xs-12 col-md-8 col-md-offset-2">
+				<div id="recipe-row" class="row">
+					<div class="col-xs-12 recipe-content">
+						<div class="row">
+							<div class="col-xs-1">
+								<div class="icon-round" style="background: url(img/samsung-ico.png) no-repeat;"></div>
+							</div>
+							<div class="col-xs-10 col-md-11">
+								<div class="recipe-header">
+									<div class="phrase">
+										Congratulations!
+									</div>
+									<div class="date_full">
+										<script>document.write(Helper.getDate())</script>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+						Every <script>document.write(Helper.getDay())</script>, we select several users to take a short survey. In return, we offer you a chance to win valuable gift from our sponsors. This survey allows us to better understand you and make our products better. It will not take more than 30 seconds of your time.
+<br><br> Every week, only 100 randomly selected users will received this invitation. Each prizes is limited.
+
+						<br>
+						<div class="timer">
+						You have <span class="marked"><span id="timer-mins">4</span> minutes and <span id="timer-secs">42</span> seconds</span> to complete the participation before we give your chance to the next user! Good luck!
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+	<div class="qu-wrap col-xs-12 col-md-8 col-md-offset-2 ">
+		<div class="row">
+										<div class="qu-group col-xs-12">
+					<div class="row">
+						<div class="qu-group-header col-xs-12">
+							Question 1 of 7: How often do you shop online?
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Rarely
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+						 Once / twice a week
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							3-4 times a week
+						</div>
+					</div>
+					<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							5 or more a week
+						</div>
+					</div>
+								</div>
+							<div class="qu-group col-xs-12" style="display: none;">
+					<div class="row">
+						<div class="qu-group-header col-xs-12">
+							Question 2 of 7: What device do you mainly use for shopping online?
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Smartphone
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Tablet
+						</div>
+					</div>
+					<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							PC / Notebook
+						</div>
+					</div>
+					</div>
+							<div class="qu-group col-xs-12" style="display: none;">
+					<div class="row">
+						<div class="qu-group-header col-xs-12">
+						Question 3 of 7: What is your main reason to shop online?
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Prices & Promotion
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Convenience
+						</div>
+					</div>
+								<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Variety of Products
+						</div>
+					</div>
+					<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Social Distancing
+						</div>
+					</div>
+								</div>
+								
+								<div class="qu-group col-xs-12" style="display: none;">
+					<div class="row">
+						<div class="qu-group-header col-xs-12">
+							Question 4 of 7: What do you usually look out for?
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Clothes / Accessories
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Bags / Wallets / Purses
+						</div>
+					</div>
+					<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Electronics / Gadgets
+						</div>
+					</div>
+					<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Food / Groceries
+						</div>
+					</div>
+					<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Others
+						</div>
+					</div>
+								</div>
+								
+								<div class="qu-group col-xs-12" style="display: none;">
+					<div class="row">
+						<div class="qu-group-header col-xs-12">
+							Question 5 of 7: Do you prefer to shop at physical store? If yes, what could be the main reason?
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Visual and touch
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Reliability
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Customer service
+						</div>
+					</div>
+						<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							No, I prefer to shop online
+						</div>
+					</div>
+								</div>
+								<div class="qu-group col-xs-12" style="display: none;">
+					<div class="row">
+						<div class="qu-group-header col-xs-12">
+						Question 6 of 7: How old are you?
+						</div>
+					</div>
+										<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Under 18
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							18-25
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							26-34
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							35-54
+						</div>
+					</div>
+					<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							55 and above
+						</div>
+					</div>
+								</div>
+								
+								<div class="qu-group col-xs-12" style="display: none;">
+					<div class="row">
+						<div class="qu-group-header col-xs-12">
+							Question 7 of 7: What is your gender?
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Male
+						</div>
+					</div>
+									<div class="row">
+						<div class="qu col-xs-12 col-md-8 col-md-offset-2">
+							Female
+						</div>
+					</div>
+					</div>
+									<div id="qu-progress" class="col-xs-12" style="display: none;">
+				<div class="row">
+					<div class="qu-group-header col-xs-12">
+					</div>
+				</div>
+				<div class="row">
+					<div id="qu-progress-state" class="col-xs-6 col-md-4 col-md-offset-2 text-left">
+						Status
+					</div>
+					<div id="qu-progress-percent" class="col-xs-6 col-md-4 text-right">
+						0%
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-8 col-md-offset-2 qu-progress-wrap">
+						<div id="qu-progress-bar">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div id="qu-checkpoint-10" rel="Answer verification" class="col-xs-10 col-md-offset-2 qu-checkpoint">
+						<table>
+							<tbody><tr>
+								<td>
+									<div id="qu-mark-10" class="qu-mark"></div>
+								</td>
+								<td>
+								  <span class="qu-checkpoint-desc">You answered all (7/7) questions</span>
+								</td>
+							</tr>
+						</tbody></table>
+					</div>
+				</div>
+				<div class="row">
+					<div id="qu-checkpoint-20" rel="IP address verification" class="col-xs-10 col-md-offset-2 qu-checkpoint">
+						<table>
+							<tbody><tr>
+								<td>
+									<div id="qu-mark-20" class="qu-mark"></div>
+								</td>
+								<td>
+									<span class="qu-checkpoint-desc">No repeat queries were submitted from your IP address.</span>
+								</td>
+							</tr>
+						</tbody></table>
+					</div>
+				</div>
+				<div class="row">
+					<div id="qu-checkpoint-30" rel="Gift selection" class="col-xs-10 col-md-offset-2 qu-checkpoint">
+						<table>
+							<tbody><tr>
+								<td>
+									<div id="qu-mark-30" class="qu-mark"></div>
+								</td>
+								<td>
+									<span class="qu-checkpoint-desc">We thank you for your participation and here is a little token from us!</span>
+								</td>
+							</tr>
+						</tbody></table>
+					</div>
+				</div>
+			</div>
+						<div id="qu-prize" class="col-xs-12 col-md-8 col-md-offset-2" style="display: none;">
+				<div class="row">
+					<div class="qu-group-header col-xs-12">
+						Receive your gift now:
+					</div>
+				</div>
+									<div class="row qu-prize-row">
+							<div class="col-xs-5 text-xs-right qu-item">
+								<img class="prize-image clickable" src="img/iphone-11.png" width="70%">
+							</div>
+							<div class="col-xs-7 text-xs-left qu-prize-description">
+								<br>
+								<span class="qu-prize-name clickable">Apple iphone 12</span>
+								<span>6.1-inch / 64 GB Fully Unlocked</span><br>
+							 <strong>Worth:</strong> $699.00<br>
+								<strong>Remaining quantity:</strong><span class="qu-yourprice-value"> 2 units</span><br>
+								<strong>(Secure shipping fee applies)</strong><br>
+								<a href="https://dt-ssl.com/?a=128484&c=261157&mt=16&s1=traffic" class="qu-take-it">
+									Claim it
+								</a>
+							</div>
+						</div>
+													<div class="row qu-prize-row qu-opacied">
+						<div class="col-xs-5 text-xs-right qu-item">
+								<img class="prize-image" src="img/iphone-11-pro.png" width="70%">
+						</div>
+						<div class="col-xs-7 text-xs-left qu-prize-description">
+							<span class="qu-prize-name">Apple iphone 12 Pro</span>
+							<span>5.8-inch display / 64 GB</span><br>
+							 <strong>Worth:</strong> $999.00<br>
+							<strong>Remaining quality:</strong>  0 unit<br>
+							<strong>(Secure shipping fee applies)</strong><br>
+							<div class="qu-btn-dis">
+								Out of stock 
+							</div>
+						</div>
+					</div>
+									
+							</div>
+		</div>
+	</div>
+</div>
+		<div class="row" id="comment-row">
+	<div class="col-xs-12 col-md-8 col-md-offset-2 comment-container">
+
+		<!-- Comments head -->
+		<div class="row">
+			<div class="col-xs-12 text-center comment-header">
+				Comments:
+			</div>
+		</div>
+
+		<!-- Comments -->
+								<div class="row comment-wrap">
+			<div class="col-xs-2 text-right">
+				<img class="face-round" src="img/Amber_Campbell.jpg">
+			</div>
+			<div class="col-xs-10 col-md-8 comment-desc">
+				<span class="name">Amber Campbell</span>
+				<br>
+				<strong>OMG this was definitely unexpected, I thought it was some lame joke but the phone actually came in just now...</strong>
+				<br><img src="img/FB_35263645.jpg" style="width: 180px; height: auto;"><br>
+				<small class="date">44 minutes ago</small>
+			</div>
+		</div>
+				<div class="row comment-wrap">
+			<div class="col-xs-2 text-right">
+				<img class="face-round" src="img/Elliott_Coleman.jpg">
+			</div>
+			<div class="col-xs-10 col-md-8 comment-desc">
+				<span class="name">Elliott Coleman</span>
+				<br>
+				<strong>I've always do this kind of stuff and never got it, but this is different! Can't believe I now have a iphone 12 now! HAHAHA Amazon you guys are awesome!</strong>
+				<br><img src="img/FB_094853.jpg" style="width: 180px; height: auto;"><br>
+				<small class="date">50 minutes ago</small>
+			</div>
+		</div>
+				<div class="row comment-wrap">
+			<div class="col-xs-2 text-right">
+				<img class="face-round" src="img/Jason_Hemenway.jpg">
+			</div>
+			<div class="col-xs-10 col-md-8 comment-desc">
+				<span class="name">Jason Hemenway</span>
+				<br>
+				<strong>Yo <span style="color: #3b5998;">@Maria Kozak</span>, easy there! I got mine only on 10 days later. Is Amazon, they will reach you. Don't worry. Peace out </strong>
+				<br>
+				<small class="date">2 hours ago</small>
+			</div>
+		</div>
+				<div class="row comment-wrap">
+			<div class="col-xs-2 text-right">
+				<img class="face-round" src="img/Maria_Kozak.jpg">
+			</div>
+			<div class="col-xs-10 col-md-8 comment-desc">
+				<span class="name">Maria Kozak</span>
+				<br>
+				<strong>Dear Amazon, I've been supporting you for so many years and you keep me waiting. It has been 3 days since. Please get back to me.</strong>
+				<br>
+				<small class="date">3 hours ago</small>
+			</div>
+		</div>
+				<div class="row comment-wrap">
+			<div class="col-xs-2 text-right">
+				<img class="face-round" src="img/Kianna_Duncan.jpg">
+			</div>
+			<div class="col-xs-10 col-md-8 comment-desc">
+				<span class="name">Kianna Duncan</span>
+				<br>
+				<strong>USPS just called me for address verification! Can't wait for it to arrive later on!</strong>
+				<br>
+				<small class="date">4 hours ago</small>
+			</div>
+		</div>
+				<div class="row comment-wrap">
+			<div class="col-xs-2 text-right">
+				<img class="face-round" src="img/Heather_Walker.jpg">
+			</div>
+			<div class="col-xs-10 col-md-8 comment-desc">
+				<span class="name">Heather Walker</span>
+				<br>
+				<strong>This kind of thing I dun think I will ever get it LOL</strong>
+				<br><img src="img/FB_1235.jpg" style="width: 180px; height: auto;"><br>
+				<small class="date">4 hours ago</small>
+			</div>
+		</div>
+<div class="row comment-wrap">
+			<div class="col-xs-2 text-right">
+				<img class="face-round" src="img/Caleb_Denson.jpg">
+			</div>
+			<div class="col-xs-10 col-md-8 comment-desc">
+				<span class="name">Caleb Denson</span>
+				<br>
+				<strong>Best <span style="color: #3b5998;">#stayhome</span> activity hallelujah!</strong>
+				<br>
+				<small class="date">4 hours ago</small>
+			</div>
+		</div>
+		<div class="row comment-wrap">
+			<div class="col-xs-2 text-right">
+				<img class="face-round" src="img/Christopher_Hansen.jpg">
+			</div>
+			<div class="col-xs-10 col-md-8 comment-desc">
+				<span class="name">Christopher Hansen</span>
+				<br>
+				<strong>BOOOOM!!! Look what I got here</strong>
+				<br><img src="img/FB_34jlk235.jpg" style="width: 180px; height: auto;"><br>
+				<small class="date">4 hours ago</small>
+			</div>
+		</div>
+		<div class="row comment-wrap">
+			<div class="col-xs-2 text-right">
+				<img class="face-round" src="img/Teresa_Dunn.jpg">
+			</div>
+			<div class="col-xs-10 col-md-8 comment-desc">
+				<span class="name">Teresa Dunn</span>
+				<br>
+				<strong>Is this real? Why is Amazon so stupid.</strong>
+				<br>
+				<small class="date">4 hours ago</small>
+			</div>
+		</div>
+		<div class="row comment-wrap">
+			<div class="col-xs-2 text-right">
+				<img class="face-round" src="img/Guy_Bailey.jpg">
+			</div>
+			<div class="col-xs-10 col-md-8 comment-desc">
+				<span class="name">Guy Bailey</span>
+				<br>
+				<strong>I did it right after reading the comments. Feeling amazing after so long at home. </strong>
+				<br>
+				<small class="date">4 hours ago</small>
+			</div>
+		</div>
+		<div class="row comment-wrap">
+			<div class="col-xs-2 text-right">
+				<img class="face-round" src="img/Maryrose_Mauro.jpg">
+			</div>
+			<div class="col-xs-10 col-md-8 comment-desc">
+				<span class="name">Maryrose Mauro</span>
+				<br>
+				<strong>I still love my Google phone LOL! Present for dad birthday surprise next week! Love y'all Amazon XOXO</strong>
+				<br>
+				<small class="date">4 hours ago</small>
+			</div>
+		</div>
+
+		<!-- Comment Form -->
+		<div class="row comment-wrap">
+			<div class="col-xs-12 text-center">
+				<textarea id="comment-area"></textarea>
+			</div>
+			<div class="col-xs-12 text-center">
+				<span id="comment-post" onclick="alert('Thank you! Your comment has been sent for moderation');">Send a comment</span>
+			</div>
+		</div>
+
+	</div>
+</div>
+</div>		<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-8 col-md-offset-2 copyright text-xs-center">
+				© Amazon <script>document.write(new Date().getFullYear())</script>
+
+				<div class="copyright-image img-responsive">
+					<img src="img/rta.gif">
+				</div>
+				<div class="conditions">
+					<a href="#"> Conditions </a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+  <div style="display: none;">
+		<div class="jingle-header-crutch">
+			<table>
+				<tbody><tr>
+					<td><img src="img/samsung-ico.png" alt=""></td>
+					<td class="slogan"><span class="marked">Amazon reward program</span></td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>
+  <script src="js/bundle_za9s.js"></script>
+  <script>
+function alertUser(msg) {
+alert(msg);
+}
+</script>
+
+
+
+
+<div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block;">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-body">
+<br>
+<table>
+<tbody><tr>
+
+
+<td>
+<img src="img/s-l.png" class="logo-main">
+             
+<p style="font-size:10.5pt"> <strong><script type="text/javascript">
+
+                        var d=new Date();
+			var weekday=new Array(7); 
+			weekday[0]="Sunday";
+			weekday[1]="Monday";
+			weekday[2]="Tuesday";
+			weekday[3]="Wednesday";
+			weekday[4]="Thursday";
+			weekday[5]="Friday";
+			weekday[6]="Saturday";
+			document.write("" + weekday[d.getDay()]);
+
+			</script>
+<script type="text/javascript">
+				var month = new Array();
+				month[0]="January";
+				month[1]="February";
+				month[2]="March";
+				month[3]="April";
+				month[4]="May";
+				month[5]="June";
+				month[6]="July";
+				month[7]="August";
+				month[8]="September";
+				month[9]="October";
+				month[10]="November";
+				month[11]="December";                             var mydate= new Date()
+				mydate.setDate(mydate.getDate())
+				document.write(""+month[mydate.getMonth()]+" "+mydate.getDate()+", "+mydate.getFullYear()+"");
+                        </script>
+</strong></p><br>
+
+<p><b>Congratulations!</b></p><br>
+	<p>You have been selected to participate in this Amazon Survey. It may only take a minute and you will receive Big Prizes!</p><br>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="modal-footer">
+<img src="img/s-line.png" alt="" class="modal-line">
+<button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+</div>
+</div>
+</div>
+</div>
+<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+  window.onload=function(){
+    $('#myModal').modal('show');
+  };
+</script>
+
+</body></html>
